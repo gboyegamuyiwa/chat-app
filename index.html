@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A simple chat messaging application developed using HTML, CSS and Javascript">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Chat, Chat Application, Chat Messanger, Messaging App">
+    <meta name="author" content="Adegboyega Olumuyiwa">
+
+    <title>ChatApp Messanger</title>
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <section class="chat-container">
+      <!--  Header Starts Here -->
+        <header class="chat-menu">
+            <form>
+              <img src="assets/images/avatar.png" id="avatar-img" alt="">
+              <input type="file" id="cover" />
+            </form>
+            <div class="date-content">
+              <div id="datetime"></div>
+              <div class="text">ChatApp Messanger</div>
+            </div>
+            <ul id="menu">
+              <div class="close-btn">&times;</div>
+              <li><a href="#" id="show-info">Info</a></li>
+              <li><a href="#" id="show-about">About</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </header>  
+        <!--  Header Ends Here -->
+        <!--  Chat body comes in Here -->
+        <div id="chatbox"></div>
+
+        <!--  footer Starts Here -->
+        <footer class="chat-input">
+            <form id="form">
+              <textarea name="chat" type="text" id="input"></textarea>
+              <button type="submit" id="submit">Send</button>
+            </form>
+            <div id="msg"></div>
+        </footer>
+        <!--  footer Ends Here -->
+      </section>
+
+      <!--  Modals  -->
+      <!--  Info Modal Starts Here -->
+    <div class="modal-info" id="modal-info">
+      <h2>Info</h2>
+        <p>You can change the default avatar image above to your own image by clicking on it and changing it to your desired image</p>
+        <button id="close-modal-info">Close</button>
+    </div>
+    <!--  Info Modal Ends Here -->
+    <!--  About Modal Starts Here -->
+    <div class="modal-about" id="modal-about">
+        <h2>About</h2>
+        <p>Developed by Adegboyega Olumuyiwa. This is the first part, the second part is coming soon</p>
+        <button id="close-modal-about">Close</button>
+    </div>
+    <!--  About Modal Ends Here -->
+
+    <script src="assets/scripts.js"></script>
+</body>
+</html>

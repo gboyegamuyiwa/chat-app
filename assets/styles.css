@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: #F5EFE6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.chat-container {
+    margin: 0 auto;
+    padding-bottom: 25px;
+    background: #eee;
+    max-width: 100%;
+    border: 5px solid #212121;
+    border-radius: 18px;
+}
+
+.chat-menu {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-menu form input {
+    display: none;
+}
+
+.chat-menu img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.chat-menu #datetime {
+    display: flex;
+    font-size: 12px;
+    margin-right: 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-menu .text {
+    padding: 10px 0px;
+    margin-right: 45px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    color: #458489;
+}
+.chat-menu a.icon {
+    display: block;
+    padding-top: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #458489;
+}
+
+.chat-menu .menu-btn {
+    margin: 16px 0;
+}
+
+#menu {
+    display: none;
+    list-style: none;
+    background: #eee;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+#menu .close-btn {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background: #458489;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#menu li a {
+    display: inline-block;
+    padding-top: 10px;
+    margin: 3px 0;
+    font-size: 13px;
+    text-decoration: none;
+    color: #458489;
+}
+
+#chatbox {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    height: 460px;
+    width: 370px;
+    border: 1px solid #a7a7a7;
+    overflow: auto;
+    border-bottom: 4px solid #a7a7a7;
+}
+
+#chatbox::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+form {
+    padding: 4px 8px;
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+
+#input {
+    flex: 1;
+    padding: 5px 8px;
+    border-radius: 8px;
+    border: 1px solid #458489;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+}
+
+#submit{
+    background: #458489;
+    border: 2px solid #458489;
+    color: white;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: #458489;
+    background: none;
+}
+
+.options {
+    display: flex;
+    gap: 15px;
+}
+
+.options i {
+    color: #458489;
+    cursor: pointer;
+}
+
+#chatbox div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 5px;
+    border-radius: 10px;
+    margin: 6px 0;
+}
+
+#chatbox div p {
+    font-size: 14px;
+    width: 315px;
+    word-break: break-word;
+}
+
+#msg {
+    color: #FF1E1E;
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.modal-info,
+.modal-about {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    width: 352px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.modal-info.active,
+.modal-about.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.modal-info h2,
+.modal-about h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #458489;
+    margin-bottom: 8px;
+}
+
+.modal-info p,
+.modal-about p {
+    font-size: 16px;
+    text-align: justify;
+    color: #458489;
+    margin-bottom: 15px;
+}
+
+.modal-info button,
+.modal-about button {
+    background: #458489;
+    padding: 8px 10px;
+    width: 100%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #458489;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal-info button:hover,
+.modal-about button:hover {
+    background: none;
+    color: #458489;
+}
+
+/* Media Query*/
+@media (max-width: 947px) {
+    .modal-about {
+        width: 326px;
+    }
+}
+
+@media (max-width: 690px) {
+    .modal-about {
+        left: 50%;
+        width: 326px;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-about {
+        left: 50%;
+        width: 250px;
+    }
+}
